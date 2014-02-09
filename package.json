@@ -1,0 +1,27 @@
+{
+  "name"           : "click-boards"
+, "version"        : "0.0.1"
+, "description"    : "A node.js module to interface with various click boards from MikroElectronica"
+, "author"         : {
+    "name"         : "Marshall Rose"
+  , "email"        : "mrose17@gmail.com"
+  }
+, "repository"     : {
+    "type"         : "git"
+  , "url"          : "https://github.com/TheThingSystem/node-click-boards-api.git"
+  } 
+, "bugs"           : {
+    "url"          : "https://github.com/TheThingSystem/node-click-boards-api/issues"
+  }
+, "dependencies"   : {
+    "async"        : "0.2.10"
+  , "i2c"          : "0.1.4"
+  }
+, "keywords"       : [ "mikroBUS cape", "click board", "MikroElectronica", "BeagleBone Black"
+                     , "ADXL345", "L3GD20"]
+, "main"           : "./index.js"
+, "engines"        : {
+    "node"         : ">=0.8"
+  }
+, "readmeFilename" : "README.md"
+}
