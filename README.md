@@ -5,7 +5,7 @@ node-click-boards
 
 A node.js module to interface with various [click boards](http://www.mikroe.com/click/)
 from [MikroElectronica](http://mikroe.com/),
-running with the [mikroBUS cape](https://www.tigal.com/product/3651) 
+running with the [mikroBUS cape](https://www.tigal.com/product/3651)
 on a [BeagleBone Black](http://beagleboard.org/products/beaglebone%20black).
 
 The BeagleBone mikroBUS Cape connects upto four click boards to the BeagleBone Black.
@@ -50,7 +50,7 @@ Finally, [install the mikroBUS driver](https://www.tigal.com/wiki/doku.php?id=ti
 To summarize:
 
     % wget http://download.tigal.com/tigal/BBBmikroBUScape/
-    % tar xpf BB_board_dtbo.tar  
+    % tar xpf BB_board_dtbo.tar
     # cp BB-MIKROBUS-01-00A0.dt* /lib/firmware/
     # halt
 
@@ -61,4 +61,3 @@ To see if all went well:
     ...
     57:P---L BBB-mikroBusCape,00A1,Tigal-KG,BB-MIKROBUS-01
     ...
-
