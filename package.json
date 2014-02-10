@@ -1,6 +1,6 @@
 {
   "name"           : "click-boards"
-, "version"        : "0.0.4"
+, "version"        : "0.0.5"
 , "description"    : "A node.js module to interface with various click boards from MikroElectronica"
 , "author"         : {
     "name"         : "Marshall Rose"
