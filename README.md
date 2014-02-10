@@ -38,7 +38,6 @@ Regardless, you will want to make sure you are current:
     # apt-get update
     # apt-get upgrade
     # apt-get install i2c-tools
-    # chmod o+rw /dev/i2c*
 
 Finally, if you are running off an SD card, you probably want to always boot from that SD card
 (rather than holding down the boot button).
@@ -46,7 +45,11 @@ Look for _Perform Flash to eMMC_
 [here](https://github.com/TheThingSystem/steward/wiki/Bootstrapping-the-BeagleBone-Black-with-Debian)
 and it will explain how.
 
-Finally, [install the mikroBUS driver](https://www.tigal.com/wiki/doku.php?id=tigalcapes:bb_mikrobus_cape).
+You will want to make sure that non-root users (e.g., "debian") can access the devices:
+
+    # chmod a+rw /dev/i2c*
+
+[Install the mikroBUS driver](https://www.tigal.com/wiki/doku.php?id=tigalcapes:bb_mikrobus_cape).
 To summarize:
 
     % wget http://download.tigal.com/tigal/BBBmikroBUScape/
