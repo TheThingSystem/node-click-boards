@@ -2,12 +2,14 @@ var cliks = require('./index')
   , util  = require('util')
   ;
 
-new cliks.accel.board({ scale_factor: [ 0.0371299982 , -0.0374319982, 0.0385979986 ] }).on('ready', function() {
+new cliks.accel.board({ scale_factor: [ 0.0371299982 , -0.0374319982, 0.0385979986 ] }).on('ready', function(data) {
   var self = this
     , x    = 3
     ;
 
   console.log('accel: ready');
+  console.log(util.inspect(data, { depth: null }));
+
   var measureAccel = function() {
     self.measureAccel(function(err, result) {
       if (!!err) return console.log('accel.measureAccel=' + err.message);
@@ -24,12 +26,14 @@ new cliks.accel.board({ scale_factor: [ 0.0371299982 , -0.0374319982, 0.03859799
 });
 
 
-new cliks.gyro.board().on('ready', function() {
+new cliks.gyro.board().on('ready', function(data) {
   var self = this
     , x    = 3
     ;
 
   console.log('gyro: ready');
+  console.log(util.inspect(data, { depth: null }));
+
   var measureGyro = function() {
     self.measureGyro(function(err, results) {
       if (!!err) return console.log('gyro.measureGyro=' + err.message);
@@ -46,12 +50,14 @@ new cliks.gyro.board().on('ready', function() {
 });
 
 
-new cliks.compass.board().on('ready', function() {
+new cliks.compass.board().on('ready', function(data) {
   var self = this
     , x    = 3
     ;
 
   console.log('compass: ready');
+  console.log(util.inspect(data, { depth: null }));
+
   var measureCompass = function() {
     self.measureAcceleration(function(err, results) {
       if (!!err) return console.log('compass.measureAcceleration=' + err.message);
