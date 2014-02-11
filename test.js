@@ -59,19 +59,11 @@ new cliks.compass.board().on('ready', function(data) {
   console.log(util.inspect(data, { depth: null }));
 
   var measureCompass = function() {
-    self.measureAcceleration(function(err, results) {
-      if (!!err) return console.log('compass.measureAcceleration=' + err.message);
+    self.measureHeading(function(err, results) {
+      if (!!err) return console.log('compass.measureHeading=' + err.message);
 
-      console.log('>>> acceleration');
-      console.log(util.inspect(results, { depth: null }));
+      console.log('>>> heading=' + results);
       if (x-- > 0) setTimeout(measureCompass, 500);
-    });
-
-    self.measureMagnetism(function(err, results) {
-      if (!!err) return console.log('compass.measureMagnetism=' + err.message);
-
-      console.log('>>> magnetism');
-      console.log(util.inspect(results, { depth: null }));
     });
 
     self.measureTemperature(function(err, results) {

@@ -1,6 +1,6 @@
 {
   "name"           : "click-boards"
-, "version"        : "0.0.7"
+, "version"        : "0.0.8"
 , "description"    : "A node.js module to interface with various click boards from MikroElectronica"
 , "author"         : {
     "name"         : "Marshall Rose"
@@ -16,6 +16,7 @@
 , "dependencies"   : {
     "async"        : "0.2.10"
   , "i2c"          : "0.1.4"
+  , "vectors"      : "0.1.0"
   }
 , "keywords"       : [ "mikroBUS cape", "click board", "MikroElectronica", "BeagleBone Black"
                      , "ADXL345", "L3GD20"]
