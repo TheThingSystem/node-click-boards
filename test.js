@@ -71,3 +71,26 @@ new cliks.compass.board().on('ready', function(data) {
 }).on('error', function(err) {
   console.log('compass: ' + err.message);
 });
+
+
+new cliks.altitude.board().on('ready', function(data) {
+  var self = this
+    , x    = 3
+    ;
+
+  console.log('altitude: ready');
+  console.log(util.inspect(data, { depth: null }));
+
+  var measureAltitude = function() {
+    self.measureAltitude(function(err, results) {
+      if (!!err) return console.log('altitude.measureAltitude=' + err.message);
+
+      console.log(util.inspect(results, { depth: null }));
+      if (x-- > 0) setTimeout(measureAltitude, 500);
+    });
+  };
+
+  setTimeout(measureAltitude, 500);
+}).on('error', function(err) {
+  console.log('altitude: ' + err.message);
+});
