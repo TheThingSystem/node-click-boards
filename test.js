@@ -65,13 +65,6 @@ new cliks.compass.board().on('ready', function(data) {
       console.log('>>> heading=' + results);
       if (x-- > 0) setTimeout(measureCompass, 500);
     });
-
-    self.measureTemperature(function(err, results) {
-      if (!!err) return console.log('compass.measureTemperature=' + err.message);
-
-      console.log('>>> temperature');
-      console.log(util.inspect(results, { depth: null }));
-    });
   };
 
   setTimeout(measureCompass, 500);
