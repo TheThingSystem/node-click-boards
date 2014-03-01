@@ -1,8 +1,6 @@
 node-click-boards
 =================
 
-*NB: NOT DONE YET, BUT SOON...*
-
 A node.js module to interface with various [click boards](http://www.mikroe.com/click/)
 from [MikroElectronica](http://mikroe.com/),
 running with the [mikroBUS cape](https://www.tigal.com/product/3651)
